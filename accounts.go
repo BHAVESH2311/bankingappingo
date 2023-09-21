@@ -27,7 +27,7 @@ func CreateAccount(bankName,holderName,accountType string,) *Account {
 	}
 }
 
-func Withdraw(account *Account, amount float64) bool {
+func (account *Account) Withdraw(amount float64) bool {
 	if account.balance < amount {
 	fmt.Println("insufficient funds")
 	}
@@ -37,7 +37,7 @@ func Withdraw(account *Account, amount float64) bool {
 	return true
 }
 
-func Deposit(account *Account, amount float64) {
+func (account *Account) Deposit(amount float64) {
 		account.balance += amount 
 }
 
