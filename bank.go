@@ -67,15 +67,15 @@ func (b *Bank) TransferMoney(srcAcc, desAcc uint, amount int) {
 	var srcAccount *accounts.Account
 	var desAccount *accounts.Account
 
-	for _, j := range b.accounts {
-		if j.GetId() == uint(srcAcc) {
-			srcAccount = j
+	for _, i := range b.accounts {
+		if i.GetId() == uint(srcAcc) {
+			srcAccount = i
 		}
 	}
 
-	for _, j := range b.accounts {
-		if j.GetId() == uint(desAcc) {
-			desAccount = j
+	for _, i := range b.accounts {
+		if i.GetId() == uint(desAcc) {
+			desAccount = i
 		}
 	}
 
