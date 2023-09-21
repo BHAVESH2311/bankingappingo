@@ -117,16 +117,10 @@ func GetAdmin() *User {
 	return nil
 }
 
-func (u *User) CreateUser() {
+func (u *User) CreateUser(firstName,lastName string) {
 	if !u.isAdmin {
 		return
 	}
-	var firstName string
-	var lastName string
-	fmt.Println("Enter first name for new user: ")
-	fmt.Scan(&firstName)
-	fmt.Println("Enter last name for new user: ")
-	fmt.Scan(&lastName)
 
 	var newUser *User = u.newUser(firstName, lastName)
 
@@ -137,17 +131,11 @@ func (u *User) CreateUser() {
 	
 	}
 
-func CreateAdmin() {
+func CreateAdmin(firstName,lastName string) {
 	if admin != nil {
 		fmt.Println("Admin exists")
 		return
 	}
-	var firstName string
-	var lastName string
-	fmt.Println("Enter first name for new user: ")
-	fmt.Scan(&firstName)
-	fmt.Println("Enter last name for new user: ")
-	fmt.Scan(&lastName)
 	var newAdmin *User = newAdmin(firstName, lastName)
 	admin = newAdmin
 	fmt.Println("Admin created successfully")
