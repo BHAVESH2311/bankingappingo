@@ -146,17 +146,9 @@ func CreateAdmin() {
 	var lastName string
 	fmt.Println("Enter first name for new user: ")
 	fmt.Scan(&firstName)
-
-		fmt.Println("Name validation failed")
-	
-
 	fmt.Println("Enter last name for new user: ")
 	fmt.Scan(&lastName)
-	
-	fmt.Println("Name validation failed")
-
 	var newAdmin *User = newAdmin(firstName, lastName)
-
 	admin = newAdmin
 	fmt.Println("Admin created successfully")
 }
